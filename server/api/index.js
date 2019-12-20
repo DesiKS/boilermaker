@@ -17,7 +17,8 @@ const router = require('express').Router();
 ///////////////////////////// NEW CODE BELOW  /////////////////////////////
 //
 //
-// router.use('/puppies', require('./puppies'))  <--CHANGE
+router.use('/projects', require('./projects')); //<--CHANGE
+router.use('/auth', require('./users')); //<--CHANGE
 //
 //
 ///////////////////////////// NEW CODE ABOVE /////////////////////////////

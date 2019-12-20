@@ -3,7 +3,7 @@ module.exports = {
   mode: 'development',
   output: {
     path: __dirname, // assumes your bundle.js will also be in the root of your project folder
-    filename: 'bundle.js'
+    filename: './public/bundle.js'
   },
   devtool: 'source-maps',
   module: {
@@ -13,8 +13,12 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
         options: {
-          presets: ['@babel/react']
+          presets: ['@babel/preset-react']
         }
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
       }
     ]
   }

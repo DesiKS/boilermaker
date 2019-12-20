@@ -1,17 +1,19 @@
 import { combineReducers } from 'redux';
-// import { allCampusesReducer, singleCampusReducer } from './campusReducer'
+import { userReducer } from './userReducer';
 // import { allStudentsReducer, singleStudentReducer } from './studentsReducer'
+// import { loadingReducer } from './loadingReducer'
 
-// const rootReducer = combineReducers({
-//   //   allCampuses: allCampusesReducer,
-//   //   allStudents: allStudentsReducer,
-//   //   singleCampus: singleCampusReducer,
-//   //   singleStudent: singleStudentReducer
-// });
+const rootReducer = combineReducers({
+  user: userReducer
+  //   allStudents: allStudentsReducer,
+  //   singleCampus: singleCampusReducer,
+  //   singleStudent: singleStudentReducer,
+  //   loading: loadingReducer
+});
 
-function rootReducer(state = {}, action) {
-  // DELETE
-  return state;
-}
+// function rootReducer(state = {}, action) {
+//   // DELETE
+//   return state;
+// }
 
 export default rootReducer;

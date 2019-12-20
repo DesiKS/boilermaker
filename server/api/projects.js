@@ -5,12 +5,15 @@ const Sequelize = require('sequelize');
 ///////////////////////////// UPDATE ALL BELOW  /////////////////////////////
 //
 
-const Puppies = require('../db/models/puppies');
+const Project = require('../db/models/projects');
 
 // matches GET requests to /api/puppies/
-router.get('/', function(req, res, next) {
+router.get('/', async function(req, res, next) {
   try {
-    /* etc */
+    /* CHANGE */
+    const allProjects = await Project.findAll();
+    res.status(200).json(allProjects);
+    /* CHANGE */
   } catch (error) {
     next(error);
   }
