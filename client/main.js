@@ -14,31 +14,30 @@ import UserPage from './components/userPage';
 import '../public/index.css';
 
 ReactDOM.render(
-  <h1>HERE</h1>,
-  // <Provider store={store}>
-  //   <Router>
-  //     <Switch>
-  //       {/* <Route exact path="/" component={Root} /> */}
-  //       <Route exact path="/auth" component={UserAuthentication} />
-  //       <Route path="/home" component={UserPage} />
-  //       {/* <Route exact path="/campuses" component={AllCampusesContainer} />
-  //       <Route exact path="/students" component={AllStudentsContainer} />
-  //       <Route
-  //         path="/campuses/:campusId"
-  //         render={routeProps => (
-  //           <SingleCampusContainer id={routeProps.match.params.campusId} />
-  //         )}
-  //       />
-  //       <Route
-  //         path="/students/:studentId"
-  //         render={routeProps => (
-  //           <SingleStudentContainer id={routeProps.match.params.studentId} />
-  //         )}
-  //       />
-  //       <Route component={Error} /> */}
-  //     </Switch>
-  //   </Router>
-  // </Provider>,
+  <Provider store={store}>
+    <Router>
+      <Switch>
+        {/* <Route exact path="/" component={Root} /> */}
+        <Route exact path="/auth" component={UserAuthentication} />
+        <Route path="/home" component={UserPage} />
+        {/* <Route exact path="/campuses" component={AllCampusesContainer} />
+        <Route exact path="/students" component={AllStudentsContainer} />
+        <Route
+          path="/campuses/:campusId"
+          render={routeProps => (
+            <SingleCampusContainer id={routeProps.match.params.campusId} />
+          )}
+        />
+        <Route
+          path="/students/:studentId"
+          render={routeProps => (
+            <SingleStudentContainer id={routeProps.match.params.studentId} />
+          )}
+        />
+        <Route component={Error} /> */}
+      </Switch>
+    </Router>
+  </Provider>,
   document.getElementById('app')
 );
 
