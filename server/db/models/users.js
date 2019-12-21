@@ -19,6 +19,10 @@ const User = db.define(
     },
     googleId: {
       type: Sequelize.STRING
+    },
+    imageUrl: {
+      type: Sequelize.STRING,
+      defaultValue: '/loggin.png'
     }
   },
   {

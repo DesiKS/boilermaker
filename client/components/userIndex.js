@@ -1,30 +1,24 @@
 import React, { Component } from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  withRouter
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route, withRouter } from 'react-router-dom';
 import store from '../store';
 import { getMe } from '../reducers/userActionCreators';
 import Login from './userLogin';
-import UserPage from './userPage';
 
 const UserAuthentication = withRouter(
+  //<--------?????? with Router?
   class extends Component {
-    // componentDidMount() {                //<--------??????
-    //   store.dispatch(getMe()).then(() => {
-    //     this.props.history.push('/home');
-    //   });
-    // }
+    componentDidMount() {
+      //<--------??????
+      store.dispatch(getMe()).then(() => {
+        if (store.getState().user.id) {
+          return this.props.history.push('/home');
+        }
+      });
+    }
 
     render() {
-      return (
-        <Switch>
-          {/* <Route path="/home" component={UserPage} /> */}
-          <Route component={Login} />
-        </Switch>
-      );
+      //<--------??????
+      return <Route component={Login} />;
     }
   }
 );

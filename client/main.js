@@ -17,7 +17,7 @@ ReactDOM.render(
   <Provider store={store}>
     <Router>
       <Switch>
-        {/* <Route exact path="/" component={Root} /> */}
+        <Route exact path="/" component={Root} />
         <Route exact path="/auth" component={UserAuthentication} />
         <Route path="/home" component={UserPage} />
         {/* <Route exact path="/campuses" component={AllCampusesContainer} />
