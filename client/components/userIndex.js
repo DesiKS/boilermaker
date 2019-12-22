@@ -10,6 +10,7 @@ const UserAuthentication = withRouter(
     componentDidMount() {
       //<--------??????
       store.dispatch(getMe()).then(() => {
+        console.log('HERE', store.getState());
         if (store.getState().user.id) {
           return this.props.history.push('/home');
         }

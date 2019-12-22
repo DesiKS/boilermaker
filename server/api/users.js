@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const User = require('../db/models/users');
 
-// router.use('/google', require('./oauth'));
+router.use('/google', require('./usersOauth'));
 
 router.get('/me', (req, res, next) => {
   res.json(req.user || {});

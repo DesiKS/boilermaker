@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { login } from '../reducers/userActionCreators';
 import LocalLoginForm from './userLocalLoginForm';
-// import OauthLoginForm from './oauth-login-form'
+import OauthLoginForm from './userOathLoginForm';
 
 const Login = props => {
   const { handleSubmit } = props;
@@ -14,7 +14,7 @@ const Login = props => {
         <img src="/loggin.png" />
         <div className="grow1">
           <LocalLoginForm handleSubmit={handleSubmit} />
-          {/* <OauthLoginForm /> */}
+          <OauthLoginForm />
         </div>
       </div>
     </div>
